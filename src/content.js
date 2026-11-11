@@ -46,8 +46,9 @@ export const ctas = [
 // Work section: Anand's ten client mandates, in the deck's order. The figures
 // are the 2026 targets agreed with each client (monthly revenue unless marked),
 // not results already delivered — keep the copy framed that way.
-// Rows with a screenshot (public/work/, 1280×800) show the headline numbers in
-// an `overlay` badge; rows without one show them as `screen` lines in a
+// `stats` are the four label/value pairs from each mandate's page in the deck,
+// shown under the brand name. Beside them is a screenshot of the brand's site
+// (public/work/, 1280×800) or, until there is one, `screen` lines in a
 // terminal-style frame. Add `href`/`host`/`linkLabel` to link a row.
 export const work = {
   kicker: ['Ten mandates', 'I run end to end —', '2026 targets'],
@@ -57,11 +58,16 @@ export const work = {
       name: 'Seeaash',
       kind: 'revenue mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹75 L'],
+        ['to', '₹2 Cr'],
+        ['growth', '2.7×'],
+        ['kpi', 'ROAS 5+'],
+      ],
       href: 'https://seeaash.in',
       host: 'seeaash.in',
       image: '/work/seeaash.webp',
       imageAlt: 'Seeaash storefront',
-      overlay: '₹75 L → ₹2 Cr / month · 2.7× · ROAS 5+',
       description:
         'Triple monthly revenue to ₹2 Cr while holding blended ROAS at 5 or better — growth funded by efficiency, not by margin.',
       linkLabel: 'Visit now',
@@ -71,11 +77,16 @@ export const work = {
       name: 'Nouria',
       kind: 'revenue mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹10 L'],
+        ['to', '₹70 L'],
+        ['growth', '7.0×'],
+        ['focus', 'Contribution'],
+      ],
       href: 'https://nouriadesign.com',
       host: 'nouriadesign.com',
       image: '/work/nouria.webp',
       imageAlt: 'Nouria storefront: “Owning it”, AW2026 collection',
-      overlay: '₹10 L → ₹70 L / month · 7.0×',
       description:
         'Seven times the monthly run-rate inside a year without breaking contribution margin — the hardest multiple in the book.',
       linkLabel: 'Visit now',
@@ -85,6 +96,12 @@ export const work = {
       name: 'Bajaao',
       kind: 'revenue mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹3 Cr'],
+        ['to', '₹6 Cr'],
+        ['growth', '2.0×'],
+        ['kpi', 'Blended CAC'],
+      ],
       description:
         'Double ₹3 Cr to ₹6 Cr a month on a deep catalogue with long consideration cycles and thin per-SKU volume.',
       screen: [
@@ -98,6 +115,12 @@ export const work = {
       name: 'Home Living Furniture',
       kind: 'footfall mandate',
       statusLabel: 'usa',
+      stats: [
+        ['from', '300'],
+        ['to', '1,000'],
+        ['growth', '3.3×'],
+        ['unit', 'Store visits'],
+      ],
       description:
         'Move 300 store visits a month to 1,000 across US metros, with cost per visit — not cost per click — as the number we manage.',
       screen: [
@@ -111,6 +134,12 @@ export const work = {
       name: 'Kosha Yoga',
       kind: 'revenue mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹14 L'],
+        ['to', '₹25 L'],
+        ['growth', '1.8×'],
+        ['focus', 'Member LTV'],
+      ],
       description:
         'Grow ₹14 L to ₹25 L a month in a seasonal category with a short buying window and a naturally low repeat rate.',
       screen: [
@@ -124,6 +153,12 @@ export const work = {
       name: 'Kaanjj',
       kind: 'launch mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹0'],
+        ['to', '₹15 L / mo'],
+        ['status', 'New'],
+        ['kpi', 'ROAS 5'],
+      ],
       description:
         'A standing start to ₹15 L a month at ROAS 5 — the account has to be profitable on the first day it scales, not after it.',
       screen: [
@@ -137,6 +172,12 @@ export const work = {
       name: 'Mytvs',
       kind: 'launch mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹0'],
+        ['to', '₹20 L / mo'],
+        ['timeline', '6 months'],
+        ['motion', 'Launch → scale'],
+      ],
       description:
         'Zero to ₹20 L a month inside two quarters, with a channel mix that still works when the launch novelty wears off.',
       screen: [
@@ -151,11 +192,16 @@ export const work = {
       kind: 'enrolment mandate',
       // the deck labels this India, but the school itself is in Ajman, UAE
       statusLabel: 'uae',
+      stats: [
+        ['from', '100'],
+        ['to', '300'],
+        ['growth', '3.0×'],
+        ['per year', 'Admissions'],
+      ],
       href: 'https://brightfutureschool.ae',
       host: 'brightfutureschool.ae',
       image: '/work/brightfutureschool.webp',
       imageAlt: 'Bright Future Private School homepage: “Leading British Curriculum School in Ajman”',
-      overlay: '100 → 300 admissions / year · 3.0×',
       description:
         'Triple admissions from 100 to 300 in one academic year, at a cost per admission the school can fund from fee revenue.',
       linkLabel: 'Visit now',
@@ -165,6 +211,12 @@ export const work = {
       name: 'Swastik Production',
       kind: 'engagement mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', 'No app base'],
+        ['to', 'Full funnel'],
+        ['kpis', '3'],
+        ['measure', 'CPI · CPM · VTR'],
+      ],
       description:
         'Build an owned audience across app downloads, video views and episode completion — managed as one funnel, not three reports.',
       screen: [
@@ -178,11 +230,16 @@ export const work = {
       name: 'Ambrosia',
       kind: 'launch mandate',
       statusLabel: 'india',
+      stats: [
+        ['from', '₹0'],
+        ['to', '₹12 L / mo'],
+        ['timeline', '12 months'],
+        ['focus', 'Repeat revenue'],
+      ],
       href: 'https://ambrosiaindia.in',
       host: 'ambrosiaindia.in',
       image: '/work/ambrosia.webp',
       imageAlt: 'Ambrosia India storefront',
-      overlay: '₹0 → ₹12 L / month in 12 months',
       description:
         'A standing start to ₹12 L a month in twelve months, built on acquisition that repeats without the launch discount.',
       linkLabel: 'Visit now',

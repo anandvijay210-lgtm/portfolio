@@ -140,6 +140,47 @@
   text-transform: uppercase;
 }
 
+/* The mandate's numbers under the name, like the stat strip in Anand's deck: a
+   small label over each value, two to a line in the narrow column (four across
+   on tablets, see Responsive), between hairlines. The third value is the one
+   the deck highlights (growth, status or timeline), so it takes the accent. */
+.row__stats {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 4px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.row__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.row__stat dt {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.row__stat dd {
+  margin: 0;
+  font-size: clamp(15px, 1.25vw, 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.row__stat:nth-child(3) dd {
+  color: var(--accent);
+}
+
 /* justified to both edges, like the reference; the last line stays left */
 .row__desc {
   margin: 0;
@@ -383,6 +424,14 @@ a.frame:hover .shot img {
 
   .row__media {
     margin-top: 44px;
+  }
+}
+
+/* stacked rows with room to spare: the four numbers sit on one line */
+@media (min-width: 560px) and (max-width: 900px) {
+  .row__stats {
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
   }
 }
 

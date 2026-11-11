@@ -72,10 +72,25 @@ function ExternalLink({ href, name, children, className }) {
   )
 }
 
+// The mandate's numbers, as on its page in the deck: a small label over each
+// value (from, to, growth, kpi…).
+function Stats({ stats }) {
+  return (
+    <dl className="row__stats">
+      {stats.map(([label, value]) => (
+        <div className="row__stat" key={label}>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
 // One project per row: text on one side, media on the other (sides alternate),
 // with an outline frame offset behind the media and the project number above.
 function ProjectRow({ project, index, heading: Heading = 'h3' }) {
-  const { name, subtitle, kind, statusLabel, description, href, linkLabel } = project
+  const { name, subtitle, kind, statusLabel, stats, description, href, linkLabel } = project
   const flip = index % 2 === 1
 
   // each side slides in from its own side (see useSlideIn)
@@ -96,6 +111,8 @@ function ProjectRow({ project, index, heading: Heading = 'h3' }) {
         </p>
 
         <Heading className="row__title">{name}</Heading>
+
+        {stats && <Stats stats={stats} />}
 
         <p className="row__desc">{description}</p>
 
