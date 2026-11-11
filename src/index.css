@@ -1,0 +1,191 @@
+:root {
+  /* Shades every component builds on, derived from the active palette
+     (palettes.css) so they follow it automatically. */
+  --text-soft: color-mix(in srgb, var(--text) 85%, transparent);
+  --text-muted: color-mix(in srgb, var(--text) 60%, transparent);
+  --line-faint: color-mix(in srgb, var(--text) 12%, transparent);
+  --line: color-mix(in srgb, var(--text) 18%, transparent);
+  --line-strong: color-mix(in srgb, var(--text) 28%, transparent);
+  --name-gradient: linear-gradient(
+    180deg,
+    var(--name-1) 0%,
+    var(--name-2) 40%,
+    var(--name-3) 75%,
+    var(--name-4) 100%
+  );
+
+  /* SF Pro on Apple devices (-apple-system is how macOS/iOS expose it when it
+     isn't installed by name), Helvetica/Arial everywhere else. */
+  --font: 'SF Pro Display', 'SF Pro Icons', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  --display: var(--font);
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  /* the handwritten accent in the hero */
+  --script: 'Yellowtail', 'Brush Script MT', cursive;
+  /* only inside terminal windows */
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --gutter: clamp(20px, 4.5vw, 64px);
+  --nav-h: 64px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* matches the white intro, so nothing dark flashes before the page renders */
+html {
+  background: #fff;
+}
+
+body {
+  background: var(--bg-5);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent-soft);
+  outline-offset: 4px;
+}
+
+.accent {
+  color: var(--accent-soft);
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  margin-left: 2px;
+  vertical-align: -3px;
+  background: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+    clip-path: inset(-40% -40% 100% -40%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(-40% -40% -40% -40%);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes strokeIn {
+  from {
+    opacity: 0;
+    letter-spacing: 0.12em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: var(--display-tracking);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+}

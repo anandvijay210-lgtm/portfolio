@@ -1,0 +1,41 @@
+/* Sits over the hero (the hero reserves --nav-h of top padding for it).
+   Logo left, contact icons centred, status right. */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 12px var(--gutter);
+  min-height: var(--nav-h);
+  font-size: 12px;
+  animation: fadeDown 0.9s var(--ease-out) 0.1s both;
+}
+
+.nav__logo {
+  justify-self: start;
+  font-weight: 500;
+}
+
+.nav .status {
+  justify-self: end;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+    padding: 12px 12px 0 20px;
+    font-size: 13px;
+  }
+
+  .status--nav {
+    display: none;
+  }
+}
