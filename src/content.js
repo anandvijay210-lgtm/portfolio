@@ -102,13 +102,13 @@ export const work = {
         ['growth', '2.0×'],
         ['kpi', 'Blended CAC'],
       ],
+      href: 'https://www.bajaao.com',
+      host: 'bajaao.com',
+      image: '/work/bajaao.webp',
+      imageAlt: 'Bajaao storefront: musical instruments and audio gear',
       description:
         'Double ₹3 Cr to ₹6 Cr a month on a deep catalogue with long consideration cycles and thin per-SKU volume.',
-      screen: [
-        ['$', 'mandate bajaao'],
-        ['→', '₹3 Cr → ₹6 Cr / month'],
-        ['→', '2.0× · kpi: blended cac'],
-      ],
+      linkLabel: 'Visit now',
     },
     {
       id: 'homelivingfurniture',
@@ -121,13 +121,13 @@ export const work = {
         ['growth', '3.3×'],
         ['unit', 'Store visits'],
       ],
+      href: 'https://www.homelivingfurniture.com',
+      host: 'homelivingfurniture.com',
+      image: '/work/homelivingfurniture.webp',
+      imageAlt: 'Home Living Furniture homepage: bedroom sets and a financing offer',
       description:
         'Move 300 store visits a month to 1,000 across US metros, with cost per visit — not cost per click — as the number we manage.',
-      screen: [
-        ['$', 'mandate home-living-furniture'],
-        ['→', '300 → 1,000 store visits / month'],
-        ['→', '3.3× · kpi: cost per visit'],
-      ],
+      linkLabel: 'Visit now',
     },
     {
       id: 'koshayoga',
@@ -140,13 +140,13 @@ export const work = {
         ['growth', '1.8×'],
         ['focus', 'Member LTV'],
       ],
+      href: 'https://koshayoga.co',
+      host: 'koshayoga.co',
+      image: '/work/koshayoga.webp',
+      imageAlt: 'Kosha Yoga Co. storefront: “The Grippiest Yoga Mats”',
       description:
         'Grow ₹14 L to ₹25 L a month in a seasonal category with a short buying window and a naturally low repeat rate.',
-      screen: [
-        ['$', 'mandate kosha-yoga'],
-        ['→', '₹14 L → ₹25 L / month'],
-        ['→', '1.8× · focus: member ltv'],
-      ],
+      linkLabel: 'Visit now',
     },
     {
       id: 'kaanjj',
@@ -159,13 +159,13 @@ export const work = {
         ['status', 'New'],
         ['kpi', 'ROAS 5'],
       ],
+      href: 'https://kaanjj.com',
+      host: 'kaanjj.com',
+      image: '/work/kaanjj.webp',
+      imageAlt: 'Kaanjj storefront: “The Jewel Tones & Beyond”',
       description:
         'A standing start to ₹15 L a month at ROAS 5 — the account has to be profitable on the first day it scales, not after it.',
-      screen: [
-        ['$', 'mandate kaanjj --launch'],
-        ['→', '₹0 → ₹15 L / month'],
-        ['→', 'new launch · kpi: roas 5'],
-      ],
+      linkLabel: 'Visit now',
     },
     {
       id: 'mytvs',
@@ -178,13 +178,13 @@ export const work = {
         ['timeline', '6 months'],
         ['motion', 'Launch → scale'],
       ],
+      href: 'https://mytvs.com',
+      host: 'mytvs.com',
+      image: '/work/mytvs.webp',
+      imageAlt: 'myTVS storefront: “Right pressure, anywhere” tyre inflators',
       description:
         'Zero to ₹20 L a month inside two quarters, with a channel mix that still works when the launch novelty wears off.',
-      screen: [
-        ['$', 'mandate mytvs --launch'],
-        ['→', '₹0 → ₹20 L / month'],
-        ['→', '6 months · launch → scale'],
-      ],
+      linkLabel: 'Visit now',
     },
     {
       id: 'brightfutureschool',
